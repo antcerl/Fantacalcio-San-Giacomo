@@ -202,3 +202,14 @@ img {
         max-width: 80%;
     }
 }
+/* Figurine anti-overlap */
+@media (max-width: 768px) {
+    .figurina {
+        float: none !important;
+        position: static !important;
+        display: block;
+        margin: 0 auto 15px auto;
+        max-width: 80%;
+        height: auto;
+    }
+}
