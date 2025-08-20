@@ -82,6 +82,7 @@ main section {
     padding: 1rem;
     border-radius: 8px;
     max-width: 900px;
+    z-index: 6;
 }
 
 /* ===== TABELLA ===== */
