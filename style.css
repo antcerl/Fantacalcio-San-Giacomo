@@ -1,0 +1,274 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url("img/sfondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 0 1rem;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.header-inner {
+    background-color: #0b0b0b; /* nero notte */
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.header-inner h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.header-inner p {
+    color: #ccc;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 1rem;
+}
+
+.nav-inner {
+    background-color: #0b0b0b; /* nero notte */
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-inner a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.nav-inner a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* ===== SEZIONI ===== */
+main section {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 900px;
+}
+
+/* ===== TABELLA ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th {
+    background: #333;
+    color: white;
+    padding: 0.5rem;
+}
+
+td {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* ===== FORM ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input, textarea, button {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #0b0b0b; /* nero notte */
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #222;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* ===== FIGURINE DECORATIVE ===== */
+.figurina {
+    position: fixed;
+    width: 100px;
+    z-index: 5;
+}
+
+.figurina1 { top: 3.1%; left: 2.8%; transform: rotate(-5deg); }
+.figurina2 { top: 31.3%; left: 5.6%; transform: rotate(8deg); }
+.figurina3 { bottom: 23.4%; left: 4.2%; transform: rotate(-10deg); }
+.figurina4 { top: 23.4%; right: 4.2%; transform: rotate(7deg); }
+.figurina5 { bottom: 31.3%; right: 2.8%; transform: rotate(-6deg); }
+
+
+
+/* Rendere immagini e contenitori fluidi */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Layout responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+    nav, header, footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Miglioramento usabilità su schermi piccoli */
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    button, input, select {
+        width: 100%;
+    }
+}
+
+
+/* Stile figurine responsive */
+.figurina {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .figurina {
+        display: block;
+        margin: 0 auto 15px auto;
+        max-width: 80%;
+    }
+}
+
+
+/* Sezione squadre */
+.squadre {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px;
+}
+
+.squadra {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.squadra img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.squadra .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.squadra strong {
+  font-size: 1.2em;
+  color: #ffffff; /* bianco */
+}
+
+.squadra p {
+  margin: 0;
+  color: #ffffff; /* bianco per la descrizione */
+}
+
+
+/* ===== Figurine mobile: sticky sotto al testo ===== */
+@media (max-width: 768px) {
+    .figurine-container {
+        display: none; /* Nascondo la versione desktop in mobile */
+    }
+    .figurine-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: sticky;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        z-index: 10;
+    }
+    .figurine-mobile img {
+        width: 45%;
+        margin: 2%;
+    }
+}
+/* Desktop mantiene figurine classiche */
+@media (min-width: 769px) {
+    .figurine-mobile {
+        display: none;
+    }
+}
